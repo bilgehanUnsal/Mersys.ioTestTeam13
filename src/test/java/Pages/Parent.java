@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -50,5 +51,10 @@ public class Parent {
         scrollToElement(element);
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].click();", element);
+    }
+    public void selectContainElement(WebElement element,String value){
+        this.wait.until(ExpectedConditions.visibilityOf(element));
+        Select selectMenu = new Select(element);
+        selectMenu.selectByValue(value);
     }
 }
