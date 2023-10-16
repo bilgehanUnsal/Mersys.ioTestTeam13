@@ -19,8 +19,8 @@ public class _01_Login {
     @When("Enter username and password click login button with ApachePOI")
     public void enterUsernameAndPasswordClickLoginButtonWithApachePOI(DataTable dt) {
         List<String> stringList = dt.asList(String.class);
-        ArrayList<ArrayList<String>> tablo = Excelutility.getData(
-                "src/test/java/StepDefinitions/TestMersys.io.xlsx", "Sheet1", 2);
+        ArrayList<ArrayList<String>> tablo = Excelutility.getData
+                ("src/test/java/StepDefinitions/TestMersys.io.xlsx", "Sheet1", 2);
 
         for (ArrayList<String> satir : tablo){
             dc.mySendKeys(dc.getWebElement(stringList.get(0)), satir.get(0));
