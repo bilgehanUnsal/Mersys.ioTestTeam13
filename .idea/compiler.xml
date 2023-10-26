@@ -9,5 +9,8 @@
         <module name="Mersys.ioTestTeam13" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Mersys.ioTestTeam13" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
