@@ -21,10 +21,10 @@ public class Excelutility {
             System.out.println("e = " + e.getMessage());;
         }
 
-        for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {  //her bir satırı
+        for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {
 
             ArrayList<String> satir=new ArrayList<>();
-            for (int j = 0; j < sutunSayisi; j++) {  // sutun sayısı kadar dolas
+            for (int j = 0; j < sutunSayisi; j++) {
                 satir.add(sheet.getRow(i).getCell(j).toString());
             }
 

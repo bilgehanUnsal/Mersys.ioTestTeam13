@@ -17,6 +17,7 @@ public class Hooks {
     @After
     public void after(Scenario senaryo) {
 
+
         if (senaryo.isFailed()){
             TakesScreenshot ts=((TakesScreenshot) Driver.getDriver());
             byte[] hafizadakiHali=ts.getScreenshotAs(OutputType.BYTES);
