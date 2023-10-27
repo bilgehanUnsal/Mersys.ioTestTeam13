@@ -15,21 +15,26 @@ Feature: Add Fields
         | Fields     |
         | btnAdd     |
       And Enter Data in Text box
-        | inputName | asdfg   |
+        | inputName | tema13   |
         | inputCode | 4322884 |
       And Click On The element
         | btnSave |
       Then User should Field successfully created
 
-      Scenario Outline: Edit Field
-        And Click On The element
-          | setup      |
-          | parameters |
-          | Fields     |
-        When Enter the "<name>"
-        And
-        Examples:
-          | name |
+  Scenario: Edite Field
+    And Click On The element
+      | setup      |
+      | parameters |
+      | Fields     |
+    And Enter Data in Text box
+      | inputSearch | tema13 |
+    And Click On The element
+      | btnSearch |
+      | btnEdite  |
+    When Enter Data in Text box
+      | inputName | degisti12 |
+    And Click On The element
+      | btnSave |
 
 
   Scenario Outline: Delete Field
@@ -41,4 +46,4 @@ Feature: Add Fields
         Then User should Field successfully deleted
         Examples:
           | name  |
-          | asdfg |
+          | degisti12 |
