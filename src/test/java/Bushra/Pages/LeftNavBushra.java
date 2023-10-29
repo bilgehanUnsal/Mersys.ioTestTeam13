@@ -10,15 +10,15 @@ public class LeftNavBushra extends Parent {
     public LeftNavBushra () { PageFactory.initElements(Driver.getDriver(), this);}
 
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
-    public WebElement lnSetup;
+    private WebElement lnSetup;
     @FindBy(xpath = "//span[text()='Human Resources']")
     private WebElement lnHumanResources;
 
     @FindBy(xpath = "(//span[text()='Setup'])[3]")
-    public WebElement lnHumanSetup;
+    private WebElement lnHumanSetup;
 
     @FindBy(xpath = "//span[text()='Position Categories']")
-    public WebElement  lnPosition;
+    private WebElement  lnPosition;
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
