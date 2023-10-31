@@ -7,7 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Dialog extends Parent {
-    public Dialog() { PageFactory.initElements(Driver.getDriver(), this); }
+    public Dialog() {
+        PageFactory.initElements(Driver.getDriver(), this); }
 
     @FindBy (css = "[class='nav-link-title ng-tns-c2089661534-6 ng-star-inserted']")
     public WebElement setup;
@@ -38,8 +39,4 @@ public class Dialog extends Parent {
     public WebElement delete;
     @FindBy(css = "[class='mdc-button mat-mdc-button mdc-button--raised mat-mdc-raised-button mat-accent mat-mdc-button-base']>[class='mdc-button__label']")
     public WebElement deleteEnd;
-
-
-
-
 }
