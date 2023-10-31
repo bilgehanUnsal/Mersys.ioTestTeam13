@@ -3,23 +3,25 @@ Feature: School Departments
 
   Background:
     Given Navigate to Campus
-    When Enter username and password and click login button
-    Then User should login successfully
-
+    When Enter username and password click login button with ApachePOI
+      | username    |
+      | password    |
+      | loginButton |
+    Then User should successfully
     When  Click on the element in LeftNav
-      | setup         |
-      | parameters    |
+      | setup2         |
+      | parameters2    |
       | nationalities |
 
 
 
   Scenario: Create Nationality
     And Click on the element in Dialog
-      | addButton |
+      | addButton2 |
     And User sending the keys in Dialog
-      | nameInput | teamOnUc |
+      | nameInput2 | teamOnUc |
     And Click on the element in Dialog
-      | saveButton |
+      | saveButton2 |
     Then Success message should be displayed
 
   Scenario: Search Nationality
@@ -39,9 +41,9 @@ Feature: School Departments
     And Click on the element in Dialog
       | editBtn |
     And User sending the keys in Dialog
-      | nameInput | team13 |
+      | nameInput2 | team13 |
     And Click on the element in Dialog
-      | saveButton |
+      | saveButton2 |
     Then Success message should be displayed
 
   Scenario: Delete Nationality

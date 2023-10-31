@@ -1,8 +1,8 @@
-package Sukran.StepDefinitions;
+package StepDefinitions;
 
+import Pages.DialogContent;
+import Pages.LeftNav;
 import Pages.Parent;
-import Sukran.Pages.DialogContent;
-import Sukran.Pages.LeftNav;
 import Utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -17,8 +17,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class _03_DocumentTypesSteps{
-    LeftNav ln=new LeftNav();
-    DialogContent dc=new DialogContent();
+    LeftNav ln = new LeftNav();
+    DialogContent dc = new DialogContent();
     @Given("Navigate to Document Types")
     public void navigateToDocumentTypes() {
         ln.myClick(ln.setup);
@@ -42,7 +42,7 @@ public class _03_DocumentTypesSteps{
 
     @Then("Document should be successfully")
     public void documentShouldBeSuccessfully() {
-        dc.verifyContainsText(dc.successMessage, "success");
+        dc.verifyContainsText(dc.successMessage1, "success");
     }
 
     @When("Document corrected name as {string} and click on the Examination")
@@ -59,16 +59,16 @@ public class _03_DocumentTypesSteps{
 
     @Then("Document should be successfully updated")
     public void documentShouldBeSuccessfullyUpdated() {
-        dc.verifyContainsText(dc.successMessage, "success");
+        dc.verifyContainsText(dc.successMessage1, "success");
     }
 
     @When("Document delete the {string}")
     public void documentDeleteThe(String arg0) {
-        dc.myClick(dc.deleteBtn);
-        dc.myClick(dc.delete);
+        dc.myJsClick(dc.deleteBtn);
+        dc.myJsClick(dc.delete);
     }
     @Then("Document should be successfully deleted")
     public void documentShouldBeSuccessfullyDeleted() {
-        dc.verifyContainsText(dc.successMessage, "success");
+        dc.verifyContainsText(dc.successMessage1, "success");
     }
 }

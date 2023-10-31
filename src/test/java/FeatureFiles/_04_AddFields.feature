@@ -30,7 +30,7 @@ Feature: Add Fields
       | inputSearch | tema13 |
     And Click On The element
       | btnSearch |
-      | btnEdite  |
+      | editBtn  |
     When Enter Data in Text box
       | inputName | degisti12 |
     And Click On The element

@@ -1,22 +1,17 @@
-package DenizUs9.StepDefiinitions;
+package StepDefinitions;
 
 import DenizUs9.Pages.Dialog;
 import Pages.DialogContent;
 import Utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
 
-public class _9_BankAccounts {
+public class _09_BankAccounts {
     public static void waitForSeconds(int seconds) {
         try {
             Thread.sleep(seconds * 1000);
@@ -24,18 +19,18 @@ public class _9_BankAccounts {
             e.printStackTrace();
         }
     }
-    Dialog d = new Dialog();
+    DialogContent dc = new DialogContent();
     public WebDriverWait bekle = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
 
     @Then("Click setup")
     public void clickSetup() {
-        d.myClick(d.setup);
+        dc.myClick(dc.setup4);
     }
 
     @Then("Click parameters")
     public void clickParameters() {
-        bekle.until(ExpectedConditions.elementToBeClickable(d.parameters));
-        d.parameters.click();
+        bekle.until(ExpectedConditions.elementToBeClickable(dc.parameters4));
+        dc.parameters4.click();
 
     }
 
@@ -43,33 +38,33 @@ public class _9_BankAccounts {
 
     @And("Click bank accounts")
     public void clickBankAccounts() {
-        d.myClick(d.bankAccounts);
+        dc.myClick(dc.bankAccounts4);
     }
 
     @Then("Add new account")
     public void addNewAccount() {
-        d.myClick(d.create);
-        d.myClick(d.name);
-        d.name.sendKeys("Bahattin");
-        d.mySendKeys(d.iban,"1234");
-        d.myClick(d.currency);
-        bekle.until(ExpectedConditions.elementToBeClickable(d.currencyEUR));
-        d.myClick(d.currencyEUR);
+        dc.myClick(dc.create4);
+        dc.myClick(dc.name4);
+        dc.name4.sendKeys("Bahattin");
+        dc.mySendKeys(dc.iban4,"1234");
+        dc.myClick(dc.currency4);
+        bekle.until(ExpectedConditions.elementToBeClickable(dc.currencyEUR4));
+        dc.myClick(dc.currencyEUR4);
 
-        d.code.sendKeys("1234");
-        bekle.until(ExpectedConditions.elementToBeClickable(d.save));
-        d.myClick(d.save);
+        dc.code4.sendKeys("1234");
+        bekle.until(ExpectedConditions.elementToBeClickable(dc.save4));
+        dc.myClick(dc.save4);
     }
 
     @Then("Account update")
     public void accountUpdate() {
         waitForSeconds(2);
         Driver.getDriver().navigate().refresh();
-        d.myClick(d.update);
+        dc.myClick(dc.update4);
         waitForSeconds(1);
-        d.iban.clear();
-        d.mySendKeys(d.iban,"9898");
-        d.myClick(d.save);
+        dc.iban4.clear();
+        dc.mySendKeys(dc.iban4,"9898");
+        dc.myClick(dc.save4);
 
 
     }
@@ -77,9 +72,9 @@ public class _9_BankAccounts {
     @Then("Account will be inactive")
     public void accountWillBeInactive() {
         waitForSeconds(2);
-        d.myClick(d.update);
-        d.myClick(d.inActive);
-        d.myClick(d.save);
+        dc.myClick(dc.update4);
+        dc.myClick(dc.inActive4);
+        dc.myClick(dc.save4);
     }
 
 
@@ -87,7 +82,7 @@ public class _9_BankAccounts {
     @Then("User should successfully delete account")
     public void userShouldSuccessfullyDeleteAccount() {
         waitForSeconds(2);
-        d.myClick(d.delete);
-        d.myClick(d.deleteEnd);
+        dc.myClick(dc.delete4);
+        dc.myClick(dc.deleteEnd4);
     }
 }

@@ -1,8 +1,10 @@
 
-package Sena.StepDefinitions;
+package StepDefinitions;
 
 
 
+import Pages.DialogContent;
+import Pages.LeftNav;
 import Sena.Pages.DialogContentSena;
 import Sena.Pages.LeftNavSena;
 import io.cucumber.datatable.DataTable;
@@ -11,8 +13,8 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class _12_Parameters_Nationalities {
-    LeftNavSena ln = new LeftNavSena();
-    DialogContentSena dc = new DialogContentSena();
+    LeftNav ln = new LeftNav();
+    DialogContent dc = new DialogContent();
 
     @And("Click on the element in LeftNav")
     public void clickOnTheElementInLeftNav(DataTable linkler) {
@@ -45,12 +47,9 @@ public class _12_Parameters_Nationalities {
         }
     }
 
-
-
-
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-        dc.verifyContainsText(dc.successMessage, "success");
+        dc.verifyContainsText(dc.successMessage2, "success");
     }
 
     @Then("Name should display successfully")
@@ -69,27 +68,10 @@ public class _12_Parameters_Nationalities {
     public void userDeleteTheElementFromDialog(DataTable dt) {
         List<String> silinecekler = dt.asList(String.class);
 
-        for (int i = 0; i < silinecekler.size(); i++) {
+        for (int i = 0; i <= silinecekler.size(); i++) {
             dc.deleteItem(silinecekler.get(i));
         }
     }
-
-
-    @When("Enter username and password and click login button")
-    public void enter_username_and_password_and_click_login_button() {
-        dc.mySendKeys(dc.username, "turkeyts");
-        dc.mySendKeys(dc.password, "TechnoStudy123");
-        dc.myClick(dc.loginButton);
-    }
-
-    @Then("User should login successfully")
-    public void user_should_login_successfully() {
-
-        dc.verifyContainsText(dc.txtTechnoStudy,"Techno Study");
-
-    }
-
-
 }
 
 
