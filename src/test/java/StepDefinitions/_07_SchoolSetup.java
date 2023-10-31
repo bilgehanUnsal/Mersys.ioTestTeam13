@@ -1,7 +1,5 @@
 package StepDefinitions;
 
-import Bilgehan.Pages.DialogContentBilge;
-import Bilgehan.Pages.LeftNavBilge;
 import Pages.DialogContent;
 import Pages.LeftNav;
 import io.cucumber.java.en.And;

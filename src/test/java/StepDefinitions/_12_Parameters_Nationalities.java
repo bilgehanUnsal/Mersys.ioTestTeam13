@@ -5,8 +5,6 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
-import Sena.Pages.DialogContentSena;
-import Sena.Pages.LeftNavSena;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebElement;
