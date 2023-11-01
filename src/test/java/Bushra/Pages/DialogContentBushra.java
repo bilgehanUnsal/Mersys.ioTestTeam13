@@ -16,11 +16,15 @@ public class DialogContentBushra extends Parent {
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
     private WebElement dcNameInput;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']//input")
+    private WebElement dcShortName;
+
     @FindBy(xpath = "//ms-save-button/button")
     private WebElement dcSaveButton;
 
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement dcSuccessMessage;
+
 
 
     @FindBy(xpath = "(//ms-edit-button[@class='ng-star-inserted']//button)[1]")
@@ -29,12 +33,18 @@ public class DialogContentBushra extends Parent {
     @FindBy(xpath = "//ms-save-button/button")
     private WebElement dcEditSaveButton;
 
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
+    private WebElement dcSuccessMessage2;
+
     @FindBy(css = "[data-placeholder='Name']")
-    private WebElement dcSearchBox;
+    private WebElement dcSearchBoxName;
+
+    @FindBy(css = "[data-placeholder='Short Name']")
+    private WebElement dcSearchBoxShortName;
 
     @FindBy(xpath = "//ms-search-button//button")
     private WebElement dcSearchButton;
-    @FindBy(xpath = "(//ms-delete-button//button)[1]")
+    @FindBy(xpath = "(//ms-delete-button//button)[1]")////ms-delete-button//button)[1]
     private WebElement dcDeleteImageBtn;
 
     @FindBy(xpath = "//button[@type='submit']")
@@ -44,7 +54,7 @@ public class DialogContentBushra extends Parent {
     private WebElement dcDeleteSuccessMessage;
 
     @FindBy(xpath = "(//tbody[@role='rowgroup']/tr/td)[2]")
-    public WebElement dcPositionNameCont;
+    private WebElement dcPositionNameCont;
     @FindBy(xpath = "(//div[@class='mdc-form-field']//button)[1]")
     private WebElement dcActiveButton;
 
@@ -52,11 +62,14 @@ public class DialogContentBushra extends Parent {
         switch (strElement) {
             case "dcAddButton": return this.dcAddButton;
             case "dcNameInput": return this.dcNameInput;
+            case "dcShortName": return this.dcShortName;
             case "dcSaveButton": return this.dcSaveButton;
             case "dcSuccessMessage": return this.dcSuccessMessage;
             case "dcEditButton": return this.dcEditButton;
             case "dcEditSaveButton": return this.dcEditSaveButton;
-            case "dcSearchBox": return this.dcSearchBox;
+            case "dcSuccessMessage2": return this.dcSuccessMessage2;
+            case "dcSearchBoxName": return this.dcSearchBoxName;
+            case "dcSearchBoxShortName": return this.dcSearchBoxShortName;
             case "searchButton": return this.dcSearchButton;
             case "dcDeleteImageBtn": return this.dcDeleteImageBtn;
             case "dcDeleteDialogBtn": return this.dcDeleteDialogBtn;

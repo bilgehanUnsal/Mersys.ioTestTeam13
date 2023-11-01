@@ -17,7 +17,7 @@ public class LeftNavBushra extends Parent {
     @FindBy(xpath = "(//span[text()='Setup'])[3]")
     private WebElement lnHumanSetup;
 
-    @FindBy(xpath = "//span[text()='Position Categories']")
+    @FindBy(xpath = "//span[text()='Positions']")
     private WebElement  lnPosition;
 
     public WebElement getWebElement(String strElement) {
