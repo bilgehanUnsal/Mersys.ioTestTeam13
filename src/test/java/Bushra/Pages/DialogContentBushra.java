@@ -44,7 +44,7 @@ public class DialogContentBushra extends Parent {
 
     @FindBy(xpath = "//ms-search-button//button")
     private WebElement dcSearchButton;
-    @FindBy(xpath = "(//ms-delete-button//button)[1]")////ms-delete-button//button)[1]
+    @FindBy(xpath = "//ms-delete-button//button")
     private WebElement dcDeleteImageBtn;
 
     @FindBy(xpath = "//button[@type='submit']")
@@ -70,7 +70,7 @@ public class DialogContentBushra extends Parent {
             case "dcSuccessMessage2": return this.dcSuccessMessage2;
             case "dcSearchBoxName": return this.dcSearchBoxName;
             case "dcSearchBoxShortName": return this.dcSearchBoxShortName;
-            case "searchButton": return this.dcSearchButton;
+            case "dcSearchButton": return this.dcSearchButton;
             case "dcDeleteImageBtn": return this.dcDeleteImageBtn;
             case "dcDeleteDialogBtn": return this.dcDeleteDialogBtn;
             case "dcDeleteSuccessMessage": return this.dcDeleteSuccessMessage;

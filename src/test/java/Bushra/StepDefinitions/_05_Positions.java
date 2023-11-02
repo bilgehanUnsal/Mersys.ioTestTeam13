@@ -40,6 +40,7 @@ public class _05_Positions {
 
     @When("Edit Positions")
     public void editPositions() {
+
         dc.myClick(dc.getWebElement("dcEditButton"));
         dc.getWebElement("dcNameInput").clear();
         dc.mySendKeys(dc.getWebElement("dcNameInput"), "Director");
@@ -58,10 +59,14 @@ public class _05_Positions {
 
     @When("Delete to Position")
     public void deleteToPosition() {
-        dc.mySendKeys(dc.getWebElement("dcSearchBoxName"), "Director2");
-        dc.mySendKeys(dc.getWebElement("dcSearchBoxShortName"), "DR2");
+        dc.mySendKeys(dc.getWebElement("dcSearchBoxName"), "Director");
+        dc.mySendKeys(dc.getWebElement("dcSearchBoxShortName"), "DR001");
         dc.myClick(dc.getWebElement("dcSearchButton"));
-        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.getWebElement("dcSearchButton")));
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         dc.myClick(dc.getWebElement("dcDeleteImageBtn"));
         dc.myClick(dc.getWebElement("dcDeleteDialogBtn"));
 
