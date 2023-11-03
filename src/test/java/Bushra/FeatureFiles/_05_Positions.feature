@@ -14,6 +14,7 @@ Feature: HR_Positions Functionality
     Then Added Position Successfully
     When Edit Positions
     Then Edited Positions Successfully
+    And Position Search and do Active or Deactive
     When Delete to Position
     Then Deleted to Positions Succesfully
-    And Position do Active or Deactive
+
