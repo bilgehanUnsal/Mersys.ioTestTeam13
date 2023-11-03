@@ -57,11 +57,18 @@ public class _05_Positions {
 
     }
 
-    @When("Delete to Position")
-    public void deleteToPosition() {
+
+    @And("Position Search and do Active or Deactive")
+    public void positionSearchAndDoActiveOrDeactive() {
         dc.mySendKeys(dc.getWebElement("dcSearchBoxName"), "Director");
         dc.mySendKeys(dc.getWebElement("dcSearchBoxShortName"), "DR001");
         dc.myClick(dc.getWebElement("dcSearchButton"));
+        dc.myClick(dc.getWebElement("dcActiveButton"));
+
+
+    }
+    @When("Delete to Position")
+    public void deleteToPosition() {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -79,11 +86,4 @@ public class _05_Positions {
 
     }
 
-
-    @And("Position do Active or Deactive")
-    public void positionDoActiveOrDeactive() {
-
-        dc.myClick(dc.getWebElement("dcActiveButton"));
-
-    }
 }

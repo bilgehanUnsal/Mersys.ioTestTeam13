@@ -50,7 +50,7 @@ public class DialogContentBushra extends Parent {
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement dcDeleteDialogBtn;
 
-    @FindBy(xpath = "//div[contains(text(),'Location successfully deleted')]")
+    @FindBy(xpath = "//div[contains(text(),'Position successfully deleted')]")
     private WebElement dcDeleteSuccessMessage;
 
     @FindBy(xpath = "(//tbody[@role='rowgroup']/tr/td)[2]")
