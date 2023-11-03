@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Mersys.ioTestTeam13" />
+        <module name="Mersys.ioTestTeam13Bushra" />
       </profile>
     </annotationProcessing>
   </component>
